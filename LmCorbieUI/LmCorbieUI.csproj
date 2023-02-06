@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>17.0</MinimumVisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{F621C1C9-08B6-4437-A94B-716A5BC060DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LmCorbieUI</RootNamespace>
+    <AssemblyName>LmCorbieUI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <UseCodebase>true</UseCodebase>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
+    <StartAction>Program</StartAction>
+    <StartProgram Condition="'$(DevEnvDir)' != ''">$(DevEnvDir)devenv.exe</StartProgram>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="01_LmForms\Design\LmChildFormDesign.cs" />
+    <Compile Include="01_LmForms\Design\LmFormDesign.cs" />
+    <Compile Include="01_LmForms\LmContainerForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmCaixaComboBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmCaixaComboBox.Designer.cs">
+      <DependentUpon>FrmCaixaComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmCaixaMultiselecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmCaixaMultiselecao.Designer.cs">
+      <DependentUpon>FrmCaixaMultiselecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmConfigColunasGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmConfigColunasGrid.Designer.cs">
+      <DependentUpon>FrmConfigColunasGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmConfigGeralGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmConfigGeralGrid.Designer.cs">
+      <DependentUpon>FrmConfigGeralGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmConsultaGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmConsultaGeral.Designer.cs">
+      <DependentUpon>FrmConsultaGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmEscolherSimNao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmEscolherSimNao.Designer.cs">
+      <DependentUpon>FrmEscolherSimNao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmMontCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\FormsAuxiliares\FrmMontCalendar.Designer.cs">
+      <DependentUpon>FrmMontCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_LmForms\LmChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\LmMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01_LmForms\LmSingleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmImputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmImputBox.Designer.cs">
+      <DependentUpon>LmImputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmMsgBox.Designer.cs">
+      <DependentUpon>LmMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmMsgBoxCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmMsgBoxCustom.Designer.cs">
+      <DependentUpon>LmMsgBoxCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmMsgToolTip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmMsgToolTip.Designer.cs">
+      <DependentUpon>LmMsgToolTip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmMsgToolTipPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_LmMsgBox\LmMsgToolTipPerson.Designer.cs">
+      <DependentUpon>LmMsgToolTipPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_LmMsgBox\MsgBox.cs" />
+    <Compile Include="04_LmControls\DefaultControl\ColunaGridMultiselecao.cs" />
+    <Compile Include="04_LmControls\DefaultControl\LmButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmColunaGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmColunaGrid.Designer.cs">
+      <DependentUpon>LmColunaGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmDataGridMini.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmDataGridView.Designer.cs">
+      <DependentUpon>LmDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmDropdownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmFiltroMultiSelecao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmFiltroMultiSelecao.Designer.cs">
+      <DependentUpon>LmFiltroMultiSelecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmJanelaAberta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmJanelaAberta.Designer.cs">
+      <DependentUpon>LmJanelaAberta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmMenuJanelaAberta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmMenuJanelaAberta.Designer.cs">
+      <DependentUpon>LmMenuJanelaAberta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmPanelFlow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmTextBox.Designer.cs">
+      <DependentUpon>LmTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DefaultControl\LmUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04_LmControls\DesignControl\LmButtonDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmCheckBoxDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmDataGridViewDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmFiltroMultiselecaoDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmGroupBoxDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmJanelaAbertaDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmLabelDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmMenuItemDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmMenuJanelaAbertaDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmRadioButtonDesign.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmTabControlDesigner.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmTabPageCollectionEditor.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmTabPageDesigner.cs" />
+    <Compile Include="04_LmControls\DesignControl\LmTextBoxDesign.cs" />
+    <Compile Include="04_LmControls\MetodoControl\MenuColorTable.cs" />
+    <Compile Include="04_LmControls\MetodoControl\MenuRenderer.cs" />
+    <Compile Include="04_LmControls\ProvideToolboxControlAttribute.cs" />
+    <Compile Include="05_LmDesign\LmCores.cs" />
+    <Compile Include="05_LmDesign\LmDefault.cs" />
+    <Compile Include="05_LmDesign\LmDefEnums.cs" />
+    <Compile Include="05_LmDesign\LmFonts.cs" />
+    <Compile Include="05_LmDesign\LmPaintEventArgs.cs" />
+    <Compile Include="06_Interfaces\ILmControl.cs" />
+    <Compile Include="06_Interfaces\IColunaGridMultiselecao.cs" />
+    <Compile Include="08_Native\MouseHook.cs" />
+    <Compile Include="08_Native\SubClass.cs" />
+    <Compile Include="08_Native\WinApi.cs" />
+    <Compile Include="09_Metodos\AtributosCustomizados\LmAtributo.cs" />
+    <Compile Include="09_Metodos\BindingList\PropertyComparer.cs" />
+    <Compile Include="09_Metodos\BindingList\SortableBindingList.cs" />
+    <Compile Include="09_Metodos\DataTransfer\Email.cs" />
+    <Compile Include="09_Metodos\DataTransfer\FTP.cs" />
+    <Compile Include="09_Metodos\Extensao\MetodosExtensao.cs" />
+    <Compile Include="09_Metodos\Outros\Controles.cs" />
+    <Compile Include="09_Metodos\Outros\Entidade.cs" />
+    <Compile Include="09_Metodos\Outros\LmException.cs" />
+    <Compile Include="09_Metodos\Outros\Web.cs" />
+    <Compile Include="77_Global\ValPadrao.cs" />
+    <Compile Include="99_Configuracao\InfoDefaultUI.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LmCorbieUIPackage.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="iTextSharp">
+      <Version>5.5.13.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.3.32804.24" ExcludeAssets="runtime">
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.3.2092">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="01_LmForms\FormsAuxiliares\FrmCaixaComboBox.resx">
+      <DependentUpon>FrmCaixaComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\FormsAuxiliares\FrmCaixaMultiselecao.resx">
+      <DependentUpon>FrmCaixaMultiselecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\FormsAuxiliares\FrmConfigColunasGrid.resx">
+      <DependentUpon>FrmConfigColunasGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\FormsAuxiliares\FrmConfigGeralGrid.resx">
+      <DependentUpon>FrmConfigGeralGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\FormsAuxiliares\FrmConsultaGeral.resx">
+      <DependentUpon>FrmConsultaGeral.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\FormsAuxiliares\FrmEscolherSimNao.resx">
+      <DependentUpon>FrmEscolherSimNao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\FormsAuxiliares\FrmMontCalendar.resx">
+      <DependentUpon>FrmMontCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\LmChildForm.resx">
+      <DependentUpon>LmChildForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\LmMainForm.resx">
+      <DependentUpon>LmMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_LmForms\LmSingleForm.resx">
+      <DependentUpon>LmSingleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_LmMsgBox\LmImputBox.resx">
+      <DependentUpon>LmImputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_LmMsgBox\LmMsgBox.resx">
+      <DependentUpon>LmMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_LmMsgBox\LmMsgBoxCustom.resx">
+      <DependentUpon>LmMsgBoxCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_LmMsgBox\LmMsgToolTip.resx">
+      <DependentUpon>LmMsgToolTip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_LmMsgBox\LmMsgToolTipPerson.resx">
+      <DependentUpon>LmMsgToolTipPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmButton.resx">
+      <DependentUpon>LmButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmCheckBox.resx">
+      <DependentUpon>LmCheckBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmColunaGrid.resx">
+      <DependentUpon>LmColunaGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmDataGridMini.resx">
+      <DependentUpon>LmDataGridMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmDataGridView.resx">
+      <DependentUpon>LmDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmFiltroMultiSelecao.resx">
+      <DependentUpon>LmFiltroMultiSelecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmJanelaAberta.resx">
+      <DependentUpon>LmJanelaAberta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmMenuItem.resx">
+      <DependentUpon>LmMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmMenuJanelaAberta.resx">
+      <DependentUpon>LmMenuJanelaAberta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmPanelFlow.resx">
+      <DependentUpon>LmPanelFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmTextBox.resx">
+      <DependentUpon>LmTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_LmControls\DefaultControl\LmUserControl.resx">
+      <DependentUpon>LmUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo_lmcorbie.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="logo_lmcorbie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\question.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\voltar.png" />
+    <None Include="Resources\avancar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

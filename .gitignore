@@ -1,0 +1,10 @@
+.env
+.vs
+/LmCorbieCriptografar/bin
+/LmCorbieCriptografar/obj
+/LmCorbieMsgBox/bin
+/LmCorbieMsgBox/obj
+/LmCorbieUI/bin
+/LmCorbieUI/obj
+/LmCorbieUI.DEMO/bin
+/LmCorbieUI.DEMO/obj
